@@ -1,0 +1,17 @@
+{
+  "name": "test0",
+  "version": "1.0.0",
+  "description": "Frontend deployment project",
+  "main": "index.html",
+  "scripts": {
+    "build": "mkdir -p dist && cp -r * dist/ 2>/dev/null || true && rm -rf dist/.git dist/node_modules dist/dist 2>/dev/null || true",
+    "dev": "python3 -m http.server 3000 2>/dev/null || python -m http.server 3000 2>/dev/null || npx serve .",
+    "start": "npm run dev"
+  },
+  "keywords": ["frontend", "deployment"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}
